@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pagina inici</title>
+        <link rel="stylesheet" href="Pr1_estil.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Links per utilitzar els fonts de google -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- link per una pagina de icones, per posar les logos de xarxes al footer -->
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a>logo</a> <!-- Element invisible, com que posem el logo com a fons, el div ha de tindre algun contingut perque es mostri la imatge -->
+            </div>
+            <div class="opcions"> <!-- Menu de dalt, els opcions de tots pestanyes, els subopcions de .desp son invisibles, es mostren amb animacio al ficar ratoli a sobre dels opcions -->
+                <ul class="totalopcions">
+                    <a href="index.php"><li class="cadaopcio">Inici
+                    </li></a>
+                    <li class="cadaopcio">Productes
+                        <ul class="desp">
+                            <li><a href="EnStock.php">Solo en stock</a></li>
+                            <li class="last_op"><a href="TotsProductes.php">Tots Productes</a></li>  
+                        </ul>
+                    </li>
+                    <li class="cadaopcio">Categories
+                        <ul class="desp">
+                            <li><a href="CatPeriferic.php">Periferics</a></li>
+                            <li><a href="CatPC.php">PC sobretaula</a></li>
+                            <li><a href="CatComponents.php">Components</a></li>
+                            <li class="last_op"><a href="CatElectroDom.php">Electrodomestics</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="fake"></div> <!-- Element invisible, perque res es coloqui a sota del header -->
+        <main> <!-- Imatges de la portada, tambe enllaçent en taula d'estock amb producte de la imatge -->
+            <div class="productes">
+                <div class="imatges"><a href="ImgRatoli.php"><img src="Imatges/img_ratoli.png" alt="Ratoli" /></a></div>
+                <div class="imatges"><a href="ImgCascos.php"><img src="Imatges/img_cascos.png" alt="Cascos"/></a></div>
+                <div class="imatges"><a href="ImgRam.php"><img src="Imatges/ram.jpg" alt="Ram"/></a></div>
+                <div class="imatges"><a href="ImgPC.php"><img src="Imatges/torre.jpg" alt="PC"/></a></div>
+                <div class="imatges"><a href="ImgLavadora.php"><img src="Imatges/lvadora.png" alt="Lavadora"/></a></div>
+                <div class="imatges"><a href="ImgCafe.php"><img src="Imatges/cafe.png" alt="Cafe"/></a></div>
+            </div>
+        </main>
+        <footer> <!-- El footer amb informació addicional de la nostra empresa -->
+            <div class="quisom">
+                <b>Qui som?</b>
+                <br />
+                <br />
+                <a href="#">Qui som?</a>
+                <br />
+                <a href="#">Nostres botigues</a>
+                <br />
+                <a href="#">Condicions de compra</a>
+                <br />
+                <a href="#">Marques</a>
+                <br />
+                <a href="#">Privacitat</a>
+            </div>
+            <div class="ajuda">
+                <b>Ajuda</b>
+                <br />
+                <br />
+                <a href="#">Centre de Soport</a>
+                <br />
+                <a href="#">Contacte</a>
+                <br />
+                <a href="#">Publicitat</a>
+                <br />
+                <a href="#">Politica de cookies</a>
+            </div>
+            <div class="altres">
+                <b>Altres</b>
+                <br />
+                <br />
+                <a href="#">Ofertes</a>
+                <br />
+                <a href="#">Black friday</a>
+                <br />
+                <a href="#">Outlet</a>
+                <br />
+                <a href="#">Servei de reparacions</a>
+            </div>
+            <div class="xarxes">
+                <b>Xarxes</b>
+                <br />
+                <br />
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+            </div>
+            <div class="under_footer">
+                <a>Copyright © 2021 GameStock, Inc.</a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,325 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+}
+
+header{
+    display: flex;
+    position:fixed;
+    background-image: url(Imatges/dark-header.jpg);
+    background-size: cover; /* Perque la imatge de fons ocupi tot l'espai possible*/
+    width: 100%;
+    height: 6%;
+    flex-direction: row;
+    justify-content: space-around;
+    opacity: 0.5;
+    transition: 1s ease; /* Comanda perque els canvis siguin més suaus */
+    transition-delay: 0.2s; /* Comanda perque el canvi se inicie en 0.2segons despres de inicialitza */
+}
+
+header:hover{ /* Quan el ratoli es posa a sobre de header, es ficara més gran i tindra 100% de transparencia */
+    height: 8%;
+    opacity: 1;
+}
+
+.fake{ /* un element invisible, l'hem posat perque cap element es fiqui a sota del header */
+    width: 100%;
+    display: block;
+    padding-bottom: 3.8%;
+    background-color:  rgb(116, 99, 96,0);
+}
+
+.logo {
+    background: url(Imatges/logo.png) no-repeat 10%;
+    background-size: cover; /* ocupara tot l'espai del div.logo */
+    width: 10%;
+}
+
+.logo a{
+    display:none; /* element invisible, perque es mostri la imatge */
+}
+
+.opcions{
+    width: 60%;
+    height: 100%;
+}
+
+.totalopcions{
+    display:flex;
+    justify-content: space-around;
+    height: 100%;
+    list-style: none;
+    font-size: 120%;
+}
+
+.totalopcions a, .cadaopcio{
+    margin: 0% 4%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    transition: 0.4s linear;
+}
+
+.opcions .totalopcions .cadaopcio{
+    cursor:pointer;
+}
+
+ul.totalopcions a{
+    text-decoration: none;
+    color: white;
+    cursor:pointer;
+}
+
+.cadaopcio:hover{
+    background-color: rgb(255, 227, 220, 0.2);
+}
+
+ul.desp{
+    top:100%;
+    width: 12%;
+    display:none;
+    position:absolute;
+    z-index: 10;
+    flex-wrap: wrap;
+    font-size: 100%;
+    transform: translate(25%,0%); /* transforma l'element, el porta 25% cap a la dreta */
+    animation: desp 1s ease forwards; /* Aqui indiquem que es un element amb animacio que es diu desp i dure 1s, forwards vol dir que al acabar la animació es quedi en seva versió final */
+}
+
+.cadaopcio:hover ul.desp{ /* al ficar el ratoli a sobre del div.cadaopcio, ens fa el següent canvi a ul.desp*/
+    display: flex;
+}
+
+@keyframes desp{ /* aqui posem els canvis d'animació */
+    0%{ /* al 0% l'element sera 0% transparent */
+        opacity: 0;
+    }
+    100%{ /* al 100% d'animacio l'elemnt sera 100% transparent i esmoura des de dreta cap a la coordenada 0 */
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+ul.desp li{
+    width: 100%;
+    height: 100%;
+    padding: 6%;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    display:flex;
+    background-color:  rgb(122, 122, 122, 0.8);
+    transition: 0.2s ease;
+}
+
+ul.desp li:hover{
+    cursor: pointer;
+    background-color: rgb(122, 122, 122, 0.9);
+}
+
+.last_op{ /* Es un aspecte visual, perque l'ultima opcio de la llista tingui un border-radius */
+    border-radius: 0px 0px 10px 10px;
+}
+
+main{
+    width:100%;
+    height: 300%;
+    display:flex;
+    margin-bottom: 10%;
+}
+
+main form{
+    position:relative;
+    width:60%;
+    margin-left: -20%; 
+    height: 100%;
+    margin-bottom: 1%;
+}
+
+form select{
+    height: 115%;
+    width: 15%;
+}
+
+form button{
+    height: 115%;
+    width: 6%;
+}
+
+.table{
+    width: 100%;
+    height: 100%;
+    margin-top:5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+}
+
+.table th{
+    border: 3px solid black;
+}
+
+.table td{
+    width: 250px;
+    padding: 3%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#cerca{
+    font-size: 20px;
+    height: 35px;
+    width: 25%;
+    z-index: 0;
+    margin-bottom:2%;
+}
+
+.productes{
+    margin:0% 20%;
+    display: grid;
+    grid-template-columns: auto auto auto; /* tots elements que afegim sempre es posaran en 3 columnes, independent de la quantitat */
+}
+
+.imatges{
+    box-shadow: 10px 20px 50px rgb(0, 0, 0, 0.3); /* aspecte visual, perque l'element tingui una ombra */
+    border-radius: 20%; 
+    margin: 10% 5%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imatges a{
+    display:flex; /* Centre la imatge per altura i per llargada */
+    justify-content: center;
+    align-items: center;
+}
+
+.imatges img{
+    transition: 0.6s ease;
+    width:80%;
+    cursor: pointer;
+}
+
+.imatges img:hover{
+    display: block;
+    transform: scale(1.08); /* transforma l'element, fa que al fica el ratoli a sobre es creixi per 1.08 */
+    opacity: 0.7;
+}
+
+.content{ /* element invisible, perque el main tingui suficient altura i el footer es quedi enganxat a baix de tot */
+    opacity: 0;
+    height: 280px;
+}
+
+footer{
+    position: relative;
+    top: 100%; /* perque el footer es quedi enganxat a baix de tot */
+    margin-top: 2%;
+    display:grid;
+    grid-template-columns: auto auto auto auto; /* 4 columnes per cada element de footer */
+    grid-template-rows: auto auto; /* dos linies per el footer i under-footer */
+    background-color: #303030;
+    width: 100%;
+    height: 17%;
+    color:#656565;
+    padding: 6%;
+    padding-bottom: 0%;
+    justify-content: space-around;
+    font-size: 110%;
+}
+
+footer a{
+    text-decoration: none;
+    color: #D3D3D3;
+}
+
+footer a:hover{
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+footer b{
+    font-size: 120%;
+}
+
+.xarxes{
+    grid-column: 5/6; /* amb aquesta linia, l'element de xarxas ocupara més espai que altres */
+}
+
+.xarxes a{
+    color:white;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 6%;
+    width: 60px;
+    font-size: 150%;
+    text-align: center;
+}
+
+.xarxes a:hover{
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+.fa-facebook{
+    background: #3b5998;   
+}
+
+.fa-instagram{ /* el color de font insta es una imatge no un color */
+    background: url(https://image.freepik.com/vector-gratis/fondo-instagram-colores-degradados_23-2147821883.jpg) no-repeat ;
+    background-size: 120%;
+}
+
+.fa-google{
+    background: #c4302b;
+}
+
+.fa-twitter{
+    background: #00acee;
+}
+
+.under_footer{ 
+    grid-row: 2; /* indiquem que under_footer es de segona linia */
+    grid-column: 1/6; /* i que ocupa els 6 columnes */
+    background-color: #303030;
+    height: 4%;
+    margin-top: 6%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.under_footer a:hover{ /* com que abans hi havia un element que canviava la transparencia de tots elements de footer, ara indiquem que aquest element sempre es quedi a 100% de tranparencia */
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
