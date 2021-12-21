@@ -24,8 +24,8 @@ $db = mysqli_connect($server, $user, $password, $database) /*connexió*/
             </div>
             <div class="opcions">
                 <ul class="totalopcions">
-                    <a href="index.php"><li class="cadaopcio">Inici
-                    </li></a>
+                    <li class="cadaopcio"><a href="index.php">Inici
+                    </a></li>
                     <li class="cadaopcio"><a href="Productes.html">Productes</a>
                         <ul class="desp">
                             <li><a href="EnStock.php">Solo en stock</a></li>
